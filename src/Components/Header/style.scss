@@ -1,0 +1,23 @@
+.ui-header {
+  .header-toolbar {
+    background-color: #ffffff;
+    padding-top: 5px;
+  }
+  .page-link {
+    border-top: 1px solid #000000;
+    color: #000000;
+    font-family: nimbus-sans-tw01con,sans-serif;
+    font-size: 18px;
+    line-height: 70px;
+    padding: 25px 4vw;
+    text-decoration: none;
+    &:hover {
+      border-top: 3px solid #e2705a;
+      color: #e2705a;
+    }
+    &.active {
+      border-top: 3px solid #000000;
+      color: #000000;
+    }
+  }
+}
