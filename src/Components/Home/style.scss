@@ -1,0 +1,13 @@
+.ui-home {
+  .carousel-image {
+    height: calc(100vh - 80px);
+    width: 100vw;
+  }
+  .carousel-select-container {
+    bottom: 0;
+    position: absolute;
+    .carousel-select {
+      color: #000000;
+    }
+  }
+}
