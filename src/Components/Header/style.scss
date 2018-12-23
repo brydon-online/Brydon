@@ -1,4 +1,6 @@
 .ui-header {
+  position: sticky;
+  top: 0;
   .header-toolbar {
     background-color: #ffffff;
     padding-top: 5px;
@@ -8,6 +10,7 @@
     color: #000000;
     font-family: nimbus-sans-tw01con,sans-serif;
     font-size: 18px;
+    font-stretch: condensed;
     line-height: 70px;
     padding: 25px 4vw;
     text-decoration: none;

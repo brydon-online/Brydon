@@ -35,7 +35,7 @@ class Header extends Component {
                   {
                     pages.map((page) => (
                       <Grid item key={page.route}>
-                        <NavLink to={page.route} className="page-link">
+                        <NavLink exact to={page.route} className="page-link">
                           {page.name}
                         </NavLink>
                       </Grid>

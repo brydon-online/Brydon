@@ -1,0 +1,42 @@
+.ui-about {
+  .about-head {
+    .about-title {
+      color: #000000;
+      font-family: nimbus-sans-tw01con,sans-serif;
+      font-size: 60px;
+      margin: 20px 4px 0 4px;
+      outline: 4px solid #000000;
+      padding: 20px;
+      text-align: center;
+    }
+    .about-brief {
+      color: #000000;
+      font-family: nimbus-sans-tw01con,sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+      line-height: 20px;
+      margin: 4px 4px 20px 4px;
+      outline: 4px solid #000000;
+      padding: 20px;
+      text-align: center;
+    }
+  }
+  .about-heading {
+    color: #000000;
+    font-family: nimbus-sans-tw01con,sans-serif;
+    font-size: 24px;
+    font-stretch: condensed;
+    letter-spacing: 10px;
+  }
+  .about-image {
+    width: 100%;
+    height: 450px;
+  }
+  .about-description {
+    color: #000000;
+    font-family: nimbus-sans-tw01con,sans-serif;
+    font-size: 16px;
+    text-align: center;
+  }
+}
