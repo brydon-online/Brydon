@@ -15,6 +15,16 @@ class Home extends Component {
     };
   }
 
+  componentDidMount() {
+    setInterval(() => {
+      let {carouselIndex} = this.state;
+      carouselIndex += 1;
+      this.setState({
+        carouselIndex: carouselIndex % 2
+      });
+    }, 5000);
+  }
+
   handleCarouselChange = (event, index) => {
     this.setState({
       carouselIndex: index
@@ -55,6 +65,31 @@ class Home extends Component {
                 color="default"
                 className={`carousel-select ${carouselIndex === 1 ? 'checked' : ''}`}
               />
+            </Grid>
+          </Grid>
+          <Grid container
+            className="home-description-container"
+            justify="center">
+            <Grid item xs={4}>
+              <Grid container className="home-description" justify="center">
+                <Grid item xs={12}>
+                  <h1 className="home-title">
+                    BRYDON
+                  </h1>
+                </Grid>
+                <Grid item xs={12}>
+                  <Grid container>
+                    <Grid item xs={6}>
+                      <p className="home-brief">
+                        Banana Chips
+                      </p>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <p className="home-navigation">Start Shopping</p>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>

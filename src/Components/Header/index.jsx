@@ -18,7 +18,7 @@ class Header extends Component {
         name: "Provisions"
       }, {
         route: "/find-us",
-        name: "Fins us"
+        name: "Find us"
       }]
     };
   }
