@@ -9,7 +9,7 @@ class About extends Component {
   render() {
     return (
       <Grid container justify="center" className="ui-about">
-        <Grid item md={6}>
+        <Grid item xs={11} sm={8} md={6}>
           <Grid container className="about-head">
             <Grid item xs={12}>
               <h1 className="about-title">

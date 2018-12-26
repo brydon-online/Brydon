@@ -70,7 +70,7 @@ class Home extends Component {
           <Grid container
             className="home-description-container"
             justify="center">
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={8} md={4}>
               <Grid container className="home-description" justify="center">
                 <Grid item xs={12}>
                   <h1 className="home-title">

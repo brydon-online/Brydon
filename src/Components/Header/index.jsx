@@ -30,7 +30,7 @@ class Header extends Component {
         <AppBar position="static" color="default">
           <Toolbar className="header-toolbar">
             <Grid container justify="center">
-              <Grid item md={8}>
+              <Grid item xs={12} sm={11} md={8}>
                 <Grid container justify="center" alignItems="center">
                   {
                     pages.map((page) => (

@@ -9,7 +9,7 @@ class FindUs extends Component {
   render() {
     return (
       <Grid container justify="center" className="ui-findus">
-        <Grid item md={6}>
+        <Grid item xs={11} sm={8} md={6}>
           <Grid container className="findus-head">
             <Grid item xs={12}>
               <h1 className="findus-title">
