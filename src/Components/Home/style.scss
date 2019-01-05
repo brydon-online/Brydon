@@ -76,12 +76,15 @@
       margin-top: 5px;
       text-align: center;
     }
-    .product-details-container {
-      background-color: rgba(0, 0, 0, 0.7);
-      min-height: 100px;
-      .view-details {
-        border-color: #ffffff;
-        color: #ffffff;
+    .product-details {
+      padding-top: 0;
+      .product-details-container {
+        background-color: rgba(0, 0, 0, 0.7);
+        min-height: 82px;
+        .view-details {
+          border-color: #ffffff;
+          color: #ffffff;
+        }
       }
     }
   }

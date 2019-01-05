@@ -1,6 +1,6 @@
-.ui-about {
-  .about-head {
-    .about-title {
+.ui-provisions {
+  .provisions-head {
+    .provisions-title {
       color: #000000;
       font-family: nimbus-sans-tw01con,sans-serif;
       font-size: 60px;
@@ -9,7 +9,7 @@
       padding: 20px;
       text-align: center;
     }
-    .about-brief {
+    .provisions-brief {
       color: #000000;
       font-family: nimbus-sans-tw01con,sans-serif;
       font-size: 24px;
@@ -22,36 +22,45 @@
       text-align: center;
     }
   }
-  .about-heading {
+  .provisions-heading {
     color: #000000;
     font-family: nimbus-sans-tw01con,sans-serif;
     font-size: 24px;
     font-stretch: condensed;
     letter-spacing: 10px;
   }
-  .about-image {
-    width: 100%;
-    height: 450px;
-  }
-  .about-description {
+  .provisions-description {
     color: #000000;
     font-family: nimbus-sans-tw01con,sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-stretch: condensed;
     text-align: center;
   }
-  .about-products {
-    margin-bottom: 20px;
-    .product-button {
-      border: 2px solid #000000;
-      border-radius: 0;
+  .provisions-products {
+    .product-name {
       color: #000000;
       font-family: nimbus-sans-tw01con,sans-serif;
-      font-size: 16px;
+      font-size: 22px;
       font-stretch: condensed;
-      &:hover {
-        background-color: #000000;
-        color: #ffffff;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+    .product-price {
+      color: #e2705a;
+      font-family: nimbus-sans-tw01con,sans-serif;
+      font-size: 18px;
+      font-stretch: condensed;
+      margin-top: 5px;
+    }
+    .product-details {
+      padding-top: 0;
+      .product-details-container {
+        background-color: rgba(0, 0, 0, 0.7);
+        min-height: 82px;
+        .view-details {
+          border-color: #ffffff;
+          color: #ffffff;
+        }
       }
     }
   }
