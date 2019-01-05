@@ -1,7 +1,7 @@
 .ui-home {
   .carousel-image {
     height: calc(100vh - 80px);
-    width: 100vw;
+    width: 100%;
   }
   .carousel-select-container {
     bottom: 0;
@@ -48,6 +48,40 @@
         outline: 4px solid #000000;
         padding: 20px;
         text-align: center;
+      }
+    }
+  }
+  .home-heading {
+    color: #000000;
+    font-family: nimbus-sans-tw01con,sans-serif;
+    font-size: 24px;
+    font-stretch: condensed;
+    letter-spacing: 10px;
+  }
+  .home-products {
+    .product-name {
+      color: #000000;
+      font-family: nimbus-sans-tw01con,sans-serif;
+      font-size: 22px;
+      font-stretch: condensed;
+      margin-bottom: 5px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .product-price {
+      color: #e2705a;
+      font-family: nimbus-sans-tw01con,sans-serif;
+      font-size: 18px;
+      font-stretch: condensed;
+      margin-top: 5px;
+      text-align: center;
+    }
+    .product-details-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      min-height: 100px;
+      .view-details {
+        border-color: #ffffff;
+        color: #ffffff;
       }
     }
   }
