@@ -5,6 +5,7 @@ import {
   GridList,
   GridListTile,
   GridListTileBar,
+  Hidden,
   IconButton,
   Radio
 } from "@material-ui/core";
@@ -105,12 +106,20 @@ class Home extends Component {
                 <Grid item xs={12}>
                   <Grid container>
                     <Grid item xs={6}>
-                      <p className="home-brief">
-                        Banana Chips
-                      </p>
+                      <Hidden xsDown>
+                        <p className="home-brief">Banana Chips</p>
+                      </Hidden>
+                      <Hidden smUp>
+                        <p className="home-brief">Banana <br/>Chips</p>
+                      </Hidden>
                     </Grid>
                     <Grid item xs={6}>
-                      <p className="home-navigation">Start Shopping</p>
+                      <Hidden xsDown>
+                        <p className="home-navigation">Start Shopping</p>
+                      </Hidden>
+                      <Hidden smUp>
+                        <p className="home-navigation">Start <br/>Shopping</p>
+                      </Hidden>
                     </Grid>
                   </Grid>
                 </Grid>
