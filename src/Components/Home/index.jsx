@@ -1,13 +1,14 @@
 import React, {Component} from "react";
 import {
-  Button,
+  Collapse,
   Grid,
   GridList,
-  GridListTileBar,
   GridListTile,
-  Collapse,
+  GridListTileBar,
+  IconButton,
   Radio
 } from "@material-ui/core";
+import {ShoppingCart} from "@material-ui/icons";
 import HomeCarousel1 from "../../Assets/Images/home-carousel-1.jpg";
 import HomeCarousel2 from "../../Assets/Images/home-carousel-2.jpg";
 import Product100 from "../../Assets/Images/product-100.jpg";
@@ -20,7 +21,6 @@ class Home extends Component {
     super(props);
     this.state = {
       carouselIndex: 0,
-      productIndex: '',
       products: [{
         name: "Banana Chips - 100 gm",
         image: Product100,
@@ -56,7 +56,6 @@ class Home extends Component {
   render() {
     const {
       carouselIndex,
-      productIndex,
       products
     } = this.state;
 
@@ -133,6 +132,11 @@ class Home extends Component {
                     <GridListTile key={index} cols={1}>
                       <img className="product-image" src={product.image} />
                       <GridListTileBar
+                        actionIcon={
+                          <IconButton className="product-details">
+                            <ShoppingCart />
+                          </IconButton>
+                        }
                         title={
                           <span className="product-name">{product.name}</span>
                         }

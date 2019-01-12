@@ -17,6 +17,9 @@ class Header extends Component {
         route: "/provisions",
         name: "Provisions"
       }, {
+        route: "/clients",
+        name: "Clients"
+      }, {
         route: "/find-us",
         name: "Find us"
       }]

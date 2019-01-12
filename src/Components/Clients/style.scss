@@ -1,6 +1,6 @@
-.ui-provisions {
-  .provisions-head {
-    .provisions-title {
+.ui-clients {
+  .clients-head {
+    .clients-title {
       color: #000000;
       font-family: nimbus-sans-tw01con,sans-serif;
       font-size: 60px;
@@ -9,7 +9,7 @@
       padding: 20px;
       text-align: center;
     }
-    .provisions-brief {
+    .clients-brief {
       color: #000000;
       font-family: nimbus-sans-tw01con,sans-serif;
       font-size: 24px;
@@ -22,44 +22,23 @@
       text-align: center;
     }
   }
-  .provisions-heading {
+  .clients-heading {
     color: #000000;
     font-family: nimbus-sans-tw01con,sans-serif;
     font-size: 24px;
     font-stretch: condensed;
     letter-spacing: 10px;
   }
-  .provisions-description {
-    color: #000000;
-    font-family: nimbus-sans-tw01con,sans-serif;
-    font-size: 18px;
-    font-stretch: condensed;
+  .client-partners {
     text-align: center;
-  }
-  .provisions-products {
-    .product-image {
-      height: 100%;
-      width: 100%;
-    }
-    .product-name {
-      color: #ffffff;
+    .partners-title {
+      color: #000000;
       font-family: nimbus-sans-tw01con,sans-serif;
       font-size: 22px;
       font-stretch: condensed;
-      margin-bottom: 5px;
-      text-align: center;
-      text-transform: uppercase;
     }
-    .product-price {
-      color: #e2705a;
-      font-family: nimbus-sans-tw01con,sans-serif;
-      font-size: 18px;
-      font-stretch: condensed;
-      margin-top: 5px;
-      text-align: center;
-    }
-    .product-details {
-      color: #ffffff;
+    .partners-image {
+      width: 60%;
     }
   }
 }
