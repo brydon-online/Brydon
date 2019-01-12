@@ -17,6 +17,7 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: path.join(__dirname, "public/index.html"),
+      favicon: path.join(__dirname, "src/Assets/Images/brydon-logo.png"),
       template: path.join(__dirname, "src/index.html")
     })
   ],
