@@ -56,11 +56,17 @@
     font-family: nimbus-sans-tw01con,sans-serif;
     font-size: 24px;
     font-stretch: condensed;
-    letter-spacing: 10px;
+    letter-spacing: 1vw;
+    text-align: center;
   }
   .home-products {
+    margin-bottom: 20px;
+    .product-image {
+      height: 100%;
+      width: 100%;
+    }
     .product-name {
-      color: #000000;
+      color: #ffffff;
       font-family: nimbus-sans-tw01con,sans-serif;
       font-size: 22px;
       font-stretch: condensed;
@@ -77,15 +83,8 @@
       text-align: center;
     }
     .product-details {
-      padding-top: 0;
-      .product-details-container {
-        background-color: rgba(0, 0, 0, 0.7);
-        min-height: 82px;
-        .view-details {
-          border-color: #ffffff;
-          color: #ffffff;
-        }
-      }
+      border-color: #ffffff;
+      color: #ffffff;
     }
   }
 }

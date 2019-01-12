@@ -62,24 +62,28 @@ class Provisions extends Component {
               <GridList cellHeight={400} cols={4} spacing={16}>
                 <GridListTile cols={1}>
                   <img
+                    className="product-image"
                     onMouseOver={(event) => this.handleProductChange(event, 0)}
                     onMouseOut={(event) => this.handleProductChange(event, '')}
                     src={HomeCarousel1} />
                 </GridListTile>
                 <GridListTile cols={1}>
                   <img
+                    className="product-image"
                     onMouseOver={(event) => this.handleProductChange(event, 1)}
                     onMouseOut={(event) => this.handleProductChange(event, '')}
                     src={HomeCarousel1} />
                 </GridListTile>
                 <GridListTile cols={1}>
                   <img
+                    className="product-image"
                     onMouseOver={(event) => this.handleProductChange(event, 2)}
                     onMouseOut={(event) => this.handleProductChange(event, '')}
                     src={HomeCarousel1} />
                 </GridListTile>
                 <GridListTile cols={1}>
                   <img
+                    className="product-image"
                     onMouseOver={(event) => this.handleProductChange(event, 3)}
                     onMouseOut={(event) => this.handleProductChange(event, '')}
                     src={HomeCarousel1} />

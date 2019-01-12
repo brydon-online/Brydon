@@ -3,12 +3,16 @@ import {
   Button,
   Grid,
   GridList,
+  GridListTileBar,
   GridListTile,
   Collapse,
   Radio
 } from "@material-ui/core";
 import HomeCarousel1 from "../../Assets/Images/home-carousel-1.jpg";
 import HomeCarousel2 from "../../Assets/Images/home-carousel-2.jpg";
+import Product100 from "../../Assets/Images/product-100.jpg";
+import Product200 from "../../Assets/Images/product-200.jpg";
+import Product500 from "../../Assets/Images/product-500.jpg";
 import "./style.scss";
 
 class Home extends Component {
@@ -16,7 +20,20 @@ class Home extends Component {
     super(props);
     this.state = {
       carouselIndex: 0,
-      productIndex: ''
+      productIndex: '',
+      products: [{
+        name: "Banana Chips - 100 gm",
+        image: Product100,
+        price: "65.00 INR"
+      }, {
+        name: "Banana Chips - 200 gm",
+        image: Product200,
+        price: "120.00 INR"
+      }, {
+        name: "Banana Chips - 500 gm",
+        image: Product500,
+        price: "290.00 INR"
+      }]
     };
   }
 
@@ -36,16 +53,11 @@ class Home extends Component {
     });
   }
 
-  handleProductChange = (event, index) => {
-    this.setState({
-      productIndex: index
-    });
-  }
-
   render() {
     const {
       carouselIndex,
-      productIndex
+      productIndex,
+      products
     } = this.state;
 
     return (
@@ -115,88 +127,22 @@ class Home extends Component {
           </Grid>
           <Grid container justify="center" className="home-products">
             <Grid item xs={11} sm={10} md={9}>
-              <GridList cellHeight={400} cols={3} spacing={16}>
-                <GridListTile cols={1}>
-                  <img
-                    onMouseOver={(event) => this.handleProductChange(event, 0)}
-                    onMouseOut={(event) => this.handleProductChange(event, '')}
-                    src={HomeCarousel1} />
-                </GridListTile>
-                <GridListTile cols={1}>
-                  <img
-                    onMouseOver={(event) => this.handleProductChange(event, 1)}
-                    onMouseOut={(event) => this.handleProductChange(event, '')}
-                    src={HomeCarousel1} />
-                </GridListTile>
-                <GridListTile cols={1}>
-                  <img
-                    onMouseOver={(event) => this.handleProductChange(event, 2)}
-                    onMouseOut={(event) => this.handleProductChange(event, '')}
-                    src={HomeCarousel1} />
-                </GridListTile>
+              <GridList cellHeight={500} cols={3} spacing={16}>
+                {
+                  products.map((product, index) => (
+                    <GridListTile key={index} cols={1}>
+                      <img className="product-image" src={product.image} />
+                      <GridListTileBar
+                        title={
+                          <span className="product-name">{product.name}</span>
+                        }
+                        subtitle={
+                          <span className="product-price">{product.price}</span>
+                        } />
+                    </GridListTile>
+                  ))
+                }
               </GridList>
-              <Grid container spacing={16}>
-                <Grid className="product-details" item xs={4} sm={4} md={4}
-                  onMouseOver={(event) => this.handleProductChange(event, 0)}
-                  onMouseOut={(event) => this.handleProductChange(event, '')}>
-                  <Collapse in={productIndex === 0} mountOnEnter unmountOnExit>
-                    <Grid container className="product-details-container"
-                      justify="center" alignItems="center">
-                      <Grid item>
-                        <Button variant="outlined" className="view-details">
-                          VIEW DETAILS
-                        </Button>
-                      </Grid>
-                    </Grid>
-                  </Collapse>
-                  <Collapse in={productIndex !== 0} mountOnEnter unmountOnExit>
-                    <div>
-                      <p className="product-name">Banana Chips</p>
-                      <p className="product-price">123.23 INR</p>
-                    </div>
-                  </Collapse>
-                </Grid>
-                <Grid className="product-details" item xs={4} sm={4} md={4}
-                  onMouseOver={(event) => this.handleProductChange(event, 1)}
-                  onMouseOut={(event) => this.handleProductChange(event, '')}>
-                  <Collapse in={productIndex === 1} mountOnEnter unmountOnExit>
-                    <Grid container className="product-details-container"
-                      justify="center" alignItems="center">
-                      <Grid item>
-                        <Button variant="outlined" className="view-details">
-                          VIEW DETAILS
-                        </Button>
-                      </Grid>
-                    </Grid>
-                  </Collapse>
-                  <Collapse in={productIndex !== 1} mountOnEnter unmountOnExit>
-                    <div>
-                      <p className="product-name">Banana Chips</p>
-                      <p className="product-price">123.23 INR</p>
-                    </div>
-                  </Collapse>
-                </Grid>
-                <Grid className="product-details" item xs={4} sm={4} md={4}
-                  onMouseOver={(event) => this.handleProductChange(event, 2)}
-                  onMouseOut={(event) => this.handleProductChange(event, '')}>
-                  <Collapse in={productIndex === 2} mountOnEnter unmountOnExit>
-                    <Grid container className="product-details-container"
-                      justify="center" alignItems="center">
-                      <Grid item>
-                        <Button variant="outlined" className="view-details">
-                          VIEW DETAILS
-                        </Button>
-                      </Grid>
-                    </Grid>
-                  </Collapse>
-                  <Collapse in={productIndex !== 2} mountOnEnter unmountOnExit>
-                    <div>
-                      <p className="product-name">Banana Chips</p>
-                      <p className="product-price">123.23 INR</p>
-                    </div>
-                  </Collapse>
-                </Grid>
-              </Grid>
             </Grid>
           </Grid>
         </Grid>
