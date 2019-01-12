@@ -5,6 +5,7 @@ import {
   GridList,
   GridListTile,
   GridListTileBar,
+  Hidden,
   IconButton
 } from "@material-ui/core";
 import {ShoppingCart} from "@material-ui/icons";
@@ -34,6 +35,24 @@ class Provisions extends Component {
     };
   }
 
+  getProduct = (product, index) => (
+    <GridListTile key={index} cols={1}>
+      <img className="product-image" src={product.image} />
+      <GridListTileBar
+        actionIcon={
+          <IconButton className="product-details">
+            <ShoppingCart />
+          </IconButton>
+        }
+        title={
+          <span className="product-name">{product.name}</span>
+        }
+        subtitle={
+          <span className="product-price">{product.price}</span>
+        } />
+    </GridListTile>
+  )
+
   render() {
     const {products} = this.state;
 
@@ -59,38 +78,28 @@ class Provisions extends Component {
               </p>
             </Grid>
           </Grid>
-          <Grid container className="provisions-title" justify="center">
-            <Grid item>
-              <p className="provisions-description">
-                I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you
-              </p>
-            </Grid>
-          </Grid>
         </Grid>
         <Grid item xs={12} sm={12} md={12}>
           <Grid container justify="center" className="provisions-products">
-            <Grid item xs={11} sm={10} md={9}>
-              <GridList cellHeight={500} cols={3} spacing={16}>
-                {
-                  products.map((product, index) => (
-                    <GridListTile key={index} cols={1}>
-                      <img className="product-image" src={product.image} />
-                      <GridListTileBar
-                        actionIcon={
-                          <IconButton className="product-details">
-                            <ShoppingCart />
-                          </IconButton>
-                        }
-                        title={
-                          <span className="product-name">{product.name}</span>
-                        }
-                        subtitle={
-                          <span className="product-price">{product.price}</span>
-                        } />
-                    </GridListTile>
-                  ))
-                }
-              </GridList>
+            <Grid item xs={11} sm={11} md={9}>
+              <Hidden xsDown>
+                <GridList cellHeight={500} cols={3} spacing={16}>
+                  {
+                    products.map((product, index) => (
+                      this.getProduct(product, index)
+                    ))
+                  }
+                </GridList>
+              </Hidden>
+              <Hidden smUp>
+                <GridList cellHeight={500} cols={1} spacing={16}>
+                  {
+                    products.map((product, index) => (
+                      this.getProduct(product, index)
+                    ))
+                  }
+                </GridList>
+              </Hidden>
             </Grid>
           </Grid>
         </Grid>
