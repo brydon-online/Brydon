@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import {
   Grid
 } from "@material-ui/core";
-import GoogleMapReact from "google-map-react";
 import "./style.scss";
 
 class FindUs extends Component {
@@ -29,10 +28,8 @@ class FindUs extends Component {
           </Grid>
           <Grid container className="findus-map" justify="center">
             <Grid item style={{ height: '300px', width: '100%' }}>
-              <GoogleMapReact
-                bootstrapURLKeys={{key: 'AIzaSyC41_v2EG4B1hZI4yOFFiwgT2uktGVXQwM'}}
-                defaultCenter={{lat: 13.09, lng: 80.27}}
-                defaultZoom={11}></GoogleMapReact>
+              <iframe width="100%" height="100%"
+                src="https://www.google.com/maps/embed/v1/place?q=sri+sumathinath+residency,+nanmangalam&key=xxxxxxxxxxxxxxxx"></iframe>
             </Grid>
           </Grid>
           <Grid container className="findus-title" justify="center">

@@ -22,15 +22,21 @@ class Provisions extends Component {
       products: [{
         name: "Banana Chips - 100 gm",
         image: Product100,
-        price: "65.00 INR"
+        link: "https://www.instamojo.com/brydon/nendran-spicy-banana-chips-100gm/?ref=store",
+        mrp: "65.00 INR",
+        price: "45.00 INR"
       }, {
         name: "Banana Chips - 200 gm",
         image: Product200,
-        price: "120.00 INR"
+        link: "https://www.instamojo.com/brydon/nendran-spicy-banana-chips-200gm/?ref=store",
+        mrp: "120.00 INR",
+        price: "90.00 INR"
       }, {
         name: "Banana Chips - 500 gm",
         image: Product500,
-        price: "290.00 INR"
+        link: "https://www.instamojo.com/brydon/nendran-spicy-banana-chips-500gm/?ref=store",
+        mrp: "290.00 INR",
+        price: "225.00 INR"
       }]
     };
   }
@@ -40,7 +46,7 @@ class Provisions extends Component {
       <img className="product-image" src={product.image} />
       <GridListTileBar
         actionIcon={
-          <IconButton className="product-details">
+          <IconButton href={product.link} className="product-details">
             <ShoppingCart />
           </IconButton>
         }
@@ -48,7 +54,10 @@ class Provisions extends Component {
           <span className="product-name">{product.name}</span>
         }
         subtitle={
-          <span className="product-price">{product.price}</span>
+          <div>
+            <span className="product-price mrp-price">{product.mrp}</span>
+            <span className="product-price">{product.price}</span>
+          </div>
         } />
     </GridListTile>
   )

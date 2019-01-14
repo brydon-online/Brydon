@@ -78,10 +78,16 @@
       text-transform: uppercase;
     }
     .product-price {
+      &.mrp-price {
+        color: #ffffff;
+        text-decoration: line-through;
+        margin-left: 0;
+      }
       color: #e2705a;
       font-family: nimbus-sans-tw01con,sans-serif;
       font-size: 18px;
       font-stretch: condensed;
+      margin-left: 5px;
       margin-top: 5px;
       text-align: center;
     }

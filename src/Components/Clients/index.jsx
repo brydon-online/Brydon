@@ -7,6 +7,7 @@ import AmazonLogo from "../../Assets/Images/amazon-logo.png";
 import NilgirisLogo from "../../Assets/Images/nilgiris-logo.jpg";
 import DelhiveryLogo from "../../Assets/Images/delhivery-logo.jpg";
 import PaytmLogo from "../../Assets/Images/paytm-logo.png";
+import InstamojoLogo from "../../Assets/Images/instamojo-logo.png";
 import "./style.scss";
 
 class Clients extends Component {
@@ -25,6 +26,9 @@ class Clients extends Component {
       }, {
         label: "Our Payment partner",
         image: PaytmLogo
+      }, {
+        label: "",
+        image: InstamojoLogo
       }]
     };
   }
@@ -44,7 +48,7 @@ class Clients extends Component {
           </Grid>
           {
             partners.map((partner, index) => (
-              <Grid container>
+              <Grid key={index} container>
                 <Grid item xs={12} sm={12} md={12}>
                   <Paper elevation={0} className="client-partners">
                     <p className="partners-title">
