@@ -9,12 +9,14 @@ import {
   IconButton,
   Radio
 } from "@material-ui/core";
+import {NavLink} from "react-router-dom";
 import {ShoppingCart} from "@material-ui/icons";
 import HomeCarousel1 from "../../Assets/Images/home-carousel-1.jpg";
 import HomeCarousel2 from "../../Assets/Images/home-carousel-2.jpg";
 import Product100 from "../../Assets/Images/product-100.jpg";
 import Product200 from "../../Assets/Images/product-200.jpg";
 import Product500 from "../../Assets/Images/product-500.jpg";
+import BrydonLogo from "../../Assets/Images/brydon-logo.png";
 import "./style.scss";
 
 class Home extends Component {
@@ -117,27 +119,19 @@ class Home extends Component {
             <Grid item xs={12} sm={8} md={4}>
               <Grid container className="home-description" justify="center">
                 <Grid item xs={12}>
-                  <h1 className="home-title">
-                    BRYDON
-                  </h1>
+                  <div className="home-logo-container">
+                    <img className="home-logo" src={BrydonLogo} />
+                  </div>
                 </Grid>
                 <Grid item xs={12}>
                   <Grid container>
                     <Grid item xs={6}>
-                      <Hidden xsDown>
-                        <p className="home-brief">Banana Chips</p>
-                      </Hidden>
-                      <Hidden smUp>
-                        <p className="home-brief">Banana <br/>Chips</p>
-                      </Hidden>
+                      <p className="home-brief">Banana <br/>Chips</p>
                     </Grid>
                     <Grid item xs={6}>
-                      <Hidden xsDown>
-                        <p className="home-navigation">Start Shopping</p>
-                      </Hidden>
-                      <Hidden smUp>
-                        <p className="home-navigation">Start <br/>Shopping</p>
-                      </Hidden>
+                      <NavLink exact to="/provisions" className="home-navigation">
+                        Start <br/>Shopping
+                      </NavLink>
                     </Grid>
                   </Grid>
                 </Grid>

@@ -59,18 +59,6 @@ class Provisions extends Component {
     return (
       <Grid container justify="center" className="ui-provisions">
         <Grid item xs={11} sm={8} md={6}>
-          <Grid container className="provisions-head">
-            <Grid item xs={12}>
-              <h1 className="provisions-title">
-                BRYDON
-              </h1>
-            </Grid>
-            <Grid item xs={12}>
-              <p className="provisions-brief">
-                Repacking and Resale of Banana chips
-              </p>
-            </Grid>
-          </Grid>
           <Grid container className="provisions-title" justify="center">
             <Grid item>
               <p className="provisions-heading">

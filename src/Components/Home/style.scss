@@ -15,14 +15,15 @@
     top: calc(50% - 100px);
     .home-description {
       background-color: rgba(255, 255, 255, 0.5);
-      .home-title {
-        color: #000000;
-        font-family: nimbus-sans-tw01con,sans-serif;
-        font-size: 60px;
-        margin: 20px 20px 0 20px;
+      .home-logo-container {
+        margin: 20px 20px 0px 20px;
         outline: 4px solid #000000;
         padding: 20px;
         text-align: center;
+        .home-logo {
+          width: 200px;
+          height: 75px;
+        }
       }
       .home-brief {
         color: #000000;
@@ -30,7 +31,7 @@
         font-size: 24px;
         font-weight: bold;
         font-style: italic;
-        line-height: 50px;
+        line-height: 32px;
         margin: 4px 0 20px 20px;
         min-height: 56px;
         outline: 4px solid #000000;
@@ -40,14 +41,16 @@
       .home-navigation {
         background-color: #000000;
         color: #ffffff;
+        display: block;
         font-family: nimbus-sans-tw01con,sans-serif;
         font-size: 20px;
-        line-height: 50px;
+        line-height: 32px;
         margin: 4px 20px 24px 0;
         min-height: 56px;
         outline: 4px solid #000000;
         padding: 20px;
         text-align: center;
+        text-decoration: none;
       }
     }
   }

@@ -10,18 +10,6 @@ class FindUs extends Component {
     return (
       <Grid container justify="center" className="ui-findus">
         <Grid item xs={11} sm={8} md={6}>
-          <Grid container className="findus-head">
-            <Grid item xs={12}>
-              <h1 className="findus-title">
-                BRYDON
-              </h1>
-            </Grid>
-            <Grid item xs={12}>
-              <p className="findus-brief">
-                Repacking and Resale of Banana chips
-              </p>
-            </Grid>
-          </Grid>
           <Grid container className="findus-title" justify="center">
             <Grid item>
               <p className="findus-heading">

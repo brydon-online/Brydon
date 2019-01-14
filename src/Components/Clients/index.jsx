@@ -35,18 +35,6 @@ class Clients extends Component {
     return (
       <Grid container justify="center" className="ui-clients">
         <Grid item xs={11} sm={8} md={6}>
-          <Grid container className="clients-head">
-            <Grid item xs={12}>
-              <h1 className="clients-title">
-                BRYDON
-              </h1>
-            </Grid>
-            <Grid item xs={12}>
-              <p className="clients-brief">
-                Repacking and Resale of Banana chips
-              </p>
-            </Grid>
-          </Grid>
           <Grid container className="clients-title" justify="center">
             <Grid item>
               <p className="clients-heading">
