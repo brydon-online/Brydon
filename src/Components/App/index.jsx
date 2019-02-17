@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Header from "../Header";
 import Footer from "../Footer";
+import Messenger from "../Messenger";
 import "./style.scss";
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
         <Header />
         {this.props.children}
         <Footer />
+        <Messenger />
       </div>
     );
   }
