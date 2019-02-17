@@ -37,6 +37,9 @@ class Header extends Component {
       }, {
         route: "/find-us",
         name: "Find us"
+      }, {
+        route: "/contact",
+        name: "Contact"
       }]
     };
   }
