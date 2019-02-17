@@ -27,7 +27,7 @@ class Messenger extends Component {
         <div id="fb-root"></div>
         <div
           className="fb-customerchat"
-          page_id="422199175185434">
+          page_id="2263160547069477">
         </div>
       </div>
     );
